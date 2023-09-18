@@ -16,7 +16,7 @@ int main(void)
 	for(i = 0; i < size; i++){
 		for(j = 0; j < size; j++){
 			square_matrix[i][j] = counter;
-			printf("%3d",square_matrix[i][j]);
+			printf("%3d ",square_matrix[i][j]);
 			counter++;
 		}
 		printf("\n");
@@ -98,7 +98,8 @@ int main(void)
 		div--;
 	}
 
-	if (size%2) snail_matrix[div][div] = counter;
+	if (1 == size) snail_matrix[0][0] = 1;
+	else if (size%2) snail_matrix[size/2][size/2] = counter;
 
 	for(i = 0; i < size; i++){
 		for(j = 0; j < size; j++){
