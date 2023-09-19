@@ -5,7 +5,7 @@ int main(void)
 	int var_a = 0xAB88C9F1, byte = 0;
 	char *ptr = NULL;
 
-	ptr = &var_a;
+	ptr = (char *)&var_a;
 
 	printf("Variable a = %X\n", var_a);
 	printf("First byte of a = %X\n", (*ptr)&0xFF);
