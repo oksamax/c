@@ -6,3 +6,7 @@
 0_urn/enum_union_typedef_syntax
 0_urn/preprocessor_directives
 5_gdb/stack_frame
+0_urn/guess_the_number
+0_urn/sbrk_func
+0_urn/malloc_calloc_realloc
+0_urn/alloca
