@@ -10,3 +10,4 @@
 0_urn/sbrk_func
 0_urn/malloc_calloc_realloc
 0_urn/alloca
+6_dunamic_memory/dyn_mem_telephone_directory
