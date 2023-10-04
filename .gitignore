@@ -11,3 +11,5 @@
 0_urn/malloc_calloc_realloc
 0_urn/alloca
 6_dunamic_memory/dyn_mem_telephone_directory
+0_urn/asm
+0_urn/asm.c
