@@ -36,7 +36,7 @@ int main (void)
 			break;
 		}
 
-		printf("Create a menu:\n 1.Add function\n2.Exit\n\nEnter the item:");
+		printf("Create a menu:\n1.Add function\n2.Exit\n\nEnter the item:");
 		scanf("%d", &item);
 
 		if (1 == item) {
@@ -53,13 +53,13 @@ int main (void)
 
 				func_ptr[counter] = dlsym(lib_ptr, func_name[counter]);
 
-				if (NULL == func_ptr[counter]) puts("There isn't such function!\n");
+				if (NULL == func_ptr[counter]) puts("There isn't such function!");
 
 			} while (NULL == func_ptr[counter]);
 			counter++;
 		}
 		
-		else if (item != 2) printf("This item is not in the menu!!!\n");
+		else if (item != 2) puts("This item is not in the menu!!!");
 
 		puts("\n");
 
@@ -69,21 +69,21 @@ int main (void)
 		printf("***%s***\n   Menu:\n",item_name[10]);
 
 		for(i = 0; i < counter; i++){
-			printf("   %d.%s", i+1, item_name[counter]);
+			printf("   %d.%s\n", i+1, item_name[i]);
 		}
-		printf("   %d.Exit", counter);
+		printf("   %d.Exit\n", counter+1);
 		printf("Enter the item:");
 		scanf("%d", &item);
+		item--;
 
-		if ((item < counter)&&(item > 0)){
-			item--;
+		if ((item < counter)&&(item > -1)){
 			printf("\nEnter first number:");
 			scanf("%f", &var_a);
 			printf("\nEnter second number:");
 			scanf("%f", &var_b);
-			printf("Result = %.2f\n", (*func_ptr[item])(ivar_a, var_b));
+			printf("Result = %.2f\n", (*func_ptr[item])(var_a, var_b));
 		}
-		else if (item != counter) printf("This item is not in the menu!!!\n");
+		else if (item != counter) puts("This item is not in the menu!!!");
 		
 		puts("\n");
 
